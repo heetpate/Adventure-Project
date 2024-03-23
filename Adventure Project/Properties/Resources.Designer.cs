@@ -100,9 +100,18 @@ namespace Adventure_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
-        internal static System.IO.UnmanagedMemoryStream Voicy_Zombies_sound_effect {
+        internal static System.IO.UnmanagedMemoryStream Voicy_Door_Opening {
             get {
-                return ResourceManager.GetStream("Voicy_Zombies_sound_effect", resourceCulture);
+                return ResourceManager.GetStream("Voicy_Door_Opening", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Voicy_Zombies_sound_ {
+            get {
+                return ResourceManager.GetStream("Voicy_Zombies_sound_", resourceCulture);
             }
         }
     }

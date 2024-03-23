@@ -95,5 +95,11 @@
   <ItemGroup>
     <None Include="Resources\cinematic-intro-6097.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voicy_Zombies sound effect-[AudioTrimmer.com].wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voicy_Door opening sound effect -[AudioTrimmer.com].wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,8 +23,9 @@ namespace Adventure_Project
 
         SoundPlayer themePlayer = new SoundPlayer(Properties.Resources.the_Quarry_Main_Theme);
         SoundPlayer timePassPlayer = new SoundPlayer(Properties.Resources.time_Pass_Theme);
-        SoundPlayer zombieNoisePlayer = new SoundPlayer(Properties.Resources.Voicy_Zombies_sound_effect);
+        SoundPlayer zombieNoisePlayer = new SoundPlayer(Properties.Resources.Voicy_Zombies_sound_);
         SoundPlayer cinamaticIntroPlayer = new SoundPlayer(Properties.Resources.cinematic_Intro);
+        SoundPlayer doorOpeningPlayer = new SoundPlayer(Properties.Resources.Voicy_Door_Opening);
 
         public Form1()
         {
@@ -309,34 +310,41 @@ namespace Adventure_Project
                 case 4:
                     zombieNoisePlayer.Stop();
                     cinamaticIntroPlayer.Play();
-                    Thread.Sleep(500);
-                    cinamaticIntroPlayer.Stop();
-                    zombieNoisePlayer.Play();
 
                     outputLabel.Text = "You and your friend started a movie but the noise is to irritating so you decide to go, check anyways";
                     Refresh();
-                    Thread.Sleep(2000);
+                    Thread.Sleep(3000);
+                    zombieNoisePlayer.Play();
                     outputLabel.Text = "You open the basement, it's pitch black and suddenly a strange looking creature jumped on your friend";
+                    zombieNoisePlayer.Play();
                     optionButton1.Text = "Save";
                     optionButton2.Text = "Get out of there";
                     break;
                 case 5:
+                    zombieNoisePlayer.Stop();
+                    doorOpeningPlayer.Play();
                     outputLabel.Text = "You open the basement, it's pitch black and suddenly a strange looking creature jumped on you friend";
+                    zombieNoisePlayer.Play();
                     optionButton1.Text = "Save";
                     optionButton2.Text = "Get out of there";
                     break;
                 case 6:
+                    zombieNoisePlayer.Stop();
+                    themePlayer.Play();
                     outputLabel.Text = "You die saving your friend\r\nYour a TRUE FRIEND! \r\n Play Again";
                     optionButton1.Text = "Yes ";
                     optionButton2.Text = "No";
                     break;
                 case 7:
+                    themePlayer.Stop();
+                    doorOpeningPlayer.Play();
                     outputLabel.Text = "You lived...\r\nYou locked the basement.";
                     optionButton1.Text = "Call";
                     optionButton2.Text = "Run";
                     break;
                 case 8:
                     outputLabel.Text = "You locked the basement";
+                    doorOpeningPlayer.Stop();
                     Refresh();
                     Thread.Sleep(1500);
                     outputLabel.Text = "Are you going to call your friends or run to your friends?";
@@ -347,10 +355,10 @@ namespace Adventure_Project
                     outputLabel.Text = "The electricity ran out the last option is to run to them";
                     Refresh();
                     Thread.Sleep(2000);
-                    outputLabel.Text = "You guys ran to your friends and told them everything";
+                    outputLabel.Text = "You ran to your friends and told them everything";
                     break;
                 case 10:
-                    outputLabel.Text = "You guys ran to your friends and told them everything";
+                    outputLabel.Text = "You ran to your friends and told them everything";
                     optionButton1.Text = "Run right away";
                     optionButton2.Text = "Find a safe place and make a plan";
                     break;
@@ -490,9 +498,10 @@ namespace Adventure_Project
             optionButton3.Hide();
             titleLabel2.Hide();
 
-            Button.Hide();
+            startButton.Hide();
             pictureBox1.Hide();
             pictureBox2.Hide();
+            Button.Hide();
 
             optionButton1.Enabled = true;
             optionButton2.Enabled = true;

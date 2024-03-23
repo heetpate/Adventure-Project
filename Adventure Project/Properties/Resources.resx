@@ -130,7 +130,10 @@
   <data name="time_Pass_Theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\17 Time Passes-[AudioTrimmer.com].wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Voicy_Zombies_sound_effect" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Voicy_Zombies sound effect.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Voicy_Door_Opening" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Voicy_Door opening sound effect -[AudioTrimmer.com].wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Voicy_Zombies_sound_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Voicy_Zombies sound effect-[AudioTrimmer.com].wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
 </root>

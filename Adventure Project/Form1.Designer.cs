@@ -83,12 +83,11 @@
             // 
             // outputLabel
             // 
-            this.outputLabel.AutoSize = true;
             this.outputLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.outputLabel.ForeColor = System.Drawing.Color.Red;
-            this.outputLabel.Location = new System.Drawing.Point(596, 59);
+            this.outputLabel.Location = new System.Drawing.Point(536, 12);
             this.outputLabel.Name = "outputLabel";
-            this.outputLabel.Size = new System.Drawing.Size(0, 32);
+            this.outputLabel.Size = new System.Drawing.Size(556, 158);
             this.outputLabel.TabIndex = 5;
             this.outputLabel.Click += new System.EventHandler(this.outputLabel_Click);
             // 
@@ -97,7 +96,7 @@
             this.titleLabel2.AutoSize = true;
             this.titleLabel2.Font = new System.Drawing.Font("Viner Hand ITC", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel2.ForeColor = System.Drawing.Color.Red;
-            this.titleLabel2.Location = new System.Drawing.Point(396, 73);
+            this.titleLabel2.Location = new System.Drawing.Point(115, 53);
             this.titleLabel2.Name = "titleLabel2";
             this.titleLabel2.Size = new System.Drawing.Size(325, 52);
             this.titleLabel2.TabIndex = 10;
@@ -140,9 +139,9 @@
             // 
             // startButton
             // 
-            this.startButton.Location = new System.Drawing.Point(939, 267);
+            this.startButton.Location = new System.Drawing.Point(921, 241);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(75, 23);
+            this.startButton.Size = new System.Drawing.Size(93, 49);
             this.startButton.TabIndex = 11;
             this.startButton.Text = "button1";
             this.startButton.UseVisualStyleBackColor = true;
