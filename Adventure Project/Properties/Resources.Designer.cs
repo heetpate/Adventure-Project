@@ -72,6 +72,24 @@ namespace Adventure_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Phone_Ringing_ {
+            get {
+                return ResourceManager.GetStream("Phone_Ringing_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream running_in_grass_ {
+            get {
+                return ResourceManager.GetStream("running_in_grass_", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
         internal static System.IO.UnmanagedMemoryStream the_Quarry_Main_Theme {
             get {
                 return ResourceManager.GetStream("the_Quarry_Main_Theme", resourceCulture);

@@ -121,6 +121,12 @@
   <data name="cinematic_Intro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cinematic-intro-6097.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="Phone_Ringing_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Phone_Ringing_8x-Mike_Koenig-696238708 (1).wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="running_in_grass_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\running-in-grass-6237.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="the_Quarry_Main_Theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\01 The Quarry Main Theme.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

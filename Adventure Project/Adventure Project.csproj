@@ -101,5 +101,11 @@
   <ItemGroup>
     <None Include="Resources\Voicy_Door opening sound effect -[AudioTrimmer.com].wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Phone_Ringing_8x-Mike_Koenig-696238708 %281%29.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\running-in-grass-6237.wav" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

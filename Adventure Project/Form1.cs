@@ -26,7 +26,8 @@ namespace Adventure_Project
         SoundPlayer zombieNoisePlayer = new SoundPlayer(Properties.Resources.Voicy_Zombies_sound_);
         SoundPlayer cinamaticIntroPlayer = new SoundPlayer(Properties.Resources.cinematic_Intro);
         SoundPlayer doorOpeningPlayer = new SoundPlayer(Properties.Resources.Voicy_Door_Opening);
-
+        SoundPlayer phoneRingingPlayer = new SoundPlayer(Properties.Resources.Phone_Ringing_);
+        SoundPlayer runningPlayer = new SoundPlayer(Properties.Resources.running_in_grass_);
         public Form1()
         {
             InitializeComponent();
@@ -286,6 +287,7 @@ namespace Adventure_Project
             {
                 case 1:
                     timePassPlayer.Play();
+                    timePassPlayer.PlayLooping();
 
                     outputLabel.Text = "You are in a campus with you school friends they are planning to go outside at night for camp fire. Go outside or stay?";
                     optionButton1.Text = "Outside";
@@ -302,6 +304,7 @@ namespace Adventure_Project
                 case 3:
                     timePassPlayer.Stop();
                     zombieNoisePlayer.Play();
+                    zombieNoisePlayer.PlayLooping();
 
                     outputLabel.Text = "You stayed with your friend and suddenly you hear strange sounds from the basement and your teacher is out with the other friends, What would you do?";
                     optionButton1.Text = "No";
@@ -314,17 +317,24 @@ namespace Adventure_Project
                     outputLabel.Text = "You and your friend started a movie but the noise is to irritating so you decide to go, check anyways";
                     Refresh();
                     Thread.Sleep(3000);
+
                     zombieNoisePlayer.Play();
+                    zombieNoisePlayer.PlayLooping();
+
                     outputLabel.Text = "You open the basement, it's pitch black and suddenly a strange looking creature jumped on your friend";
                     zombieNoisePlayer.Play();
                     optionButton1.Text = "Save";
                     optionButton2.Text = "Get out of there";
+
+                    
                     break;
                 case 5:
                     zombieNoisePlayer.Stop();
+                    
                     doorOpeningPlayer.Play();
                     outputLabel.Text = "You open the basement, it's pitch black and suddenly a strange looking creature jumped on you friend";
                     zombieNoisePlayer.Play();
+                    doorOpeningPlayer.Stop();
                     optionButton1.Text = "Save";
                     optionButton2.Text = "Get out of there";
                     break;
@@ -339,6 +349,7 @@ namespace Adventure_Project
                     themePlayer.Stop();
                     doorOpeningPlayer.Play();
                     outputLabel.Text = "You lived...\r\nYou locked the basement.";
+                    doorOpeningPlayer.Stop();
                     optionButton1.Text = "Call";
                     optionButton2.Text = "Run";
                     break;
@@ -350,29 +361,45 @@ namespace Adventure_Project
                     outputLabel.Text = "Are you going to call your friends or run to your friends?";
                     optionButton1.Text = "Run";
                     optionButton2.Text = "Call";
+                    phoneRingingPlayer.Play();
                     break;
                 case 9:
+                    phoneRingingPlayer.Stop();
+                    runningPlayer.Play();
                     outputLabel.Text = "The electricity ran out the last option is to run to them";
                     Refresh();
                     Thread.Sleep(2000);
+                    runningPlayer.Stop();
                     outputLabel.Text = "You ran to your friends and told them everything";
+                    runningPlayer.Play();
                     break;
                 case 10:
                     outputLabel.Text = "You ran to your friends and told them everything";
                     optionButton1.Text = "Run right away";
+                    runningPlayer.Play();
+                    themePlayer.Play();
                     optionButton2.Text = "Find a safe place and make a plan";
+                    runningPlayer.Stop();
+                    timePassPlayer.Play();
+                    themePlayer.Stop();
                     break;
                 case 11:
+                    zombieNoisePlayer.Play();
                     outputLabel.Text = "You and your friends got chased and killed by scary looking creature. \r\n Play Again?";
+                    zombieNoisePlayer.Stop();
+                    timePassPlayer.Play();
                     optionButton1.Text = "Yes";
                     optionButton2.Text = "No";
+                    timePassPlayer.Stop();
                     break;
                 case 12:
+                    themePlayer.Play();
                     outputLabel.Text = "You find a house where no one lives there but to keep yourself alive you decide to break into it";
                     optionButton1.Text = "Explore";
                     optionButton2.Text = "No";
                     break;
                 case 13:
+                    themePlayer.Stop();
                     outputLabel.Text = "Your safe! \r\nYou also find a gun, some food and water for temporary, the map to escape.";
                     Refresh();
                     Thread.Sleep(2000);
