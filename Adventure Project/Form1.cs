@@ -20,9 +20,20 @@ namespace Adventure_Project
 
         //Random number generator
         Random randGen = new Random();
+
+        SoundPlayer themePlayer = new SoundPlayer(Properties.Resources.the_Quarry_Main_Theme);
+        SoundPlayer timePassPlayer = new SoundPlayer(Properties.Resources.time_Pass_Theme);
+        SoundPlayer zombieNoisePlayer = new SoundPlayer(Properties.Resources.Voicy_Zombies_sound_effect);
+        SoundPlayer cinamaticIntroPlayer = new SoundPlayer(Properties.Resources.cinematic_Intro);
+
         public Form1()
         {
             InitializeComponent();
+
+           
+            themePlayer.Play();
+            themePlayer.PlayLooping();
+            
 
             optionButton1.Enabled = false;
             optionButton2.Enabled = false;
@@ -273,9 +284,11 @@ namespace Adventure_Project
             switch (page)
             {
                 case 1:
+                    timePassPlayer.Play();
+
                     outputLabel.Text = "You are in a campus with you school friends they are planning to go outside at night for camp fire. Go outside or stay?";
                     optionButton1.Text = "Outside";
-                    optionButton2.Text = "Stay";
+                    optionButton2.Text = "Stay"; 
                     break;
                 case 2:
                     outputLabel.Text = "You light up the fire and having fun. ";
@@ -284,14 +297,22 @@ namespace Adventure_Project
                     outputLabel.Text = "Your friend ran to you and tells you everything that happened";
                     optionButton1.Text = "Run right away ";
                     optionButton2.Text = "Find a safe place and make a plan";
-                    Refresh();
                     break;
                 case 3:
+                    timePassPlayer.Stop();
+                    zombieNoisePlayer.Play();
+
                     outputLabel.Text = "You stayed with your friend and suddenly you hear strange sounds from the basement and your teacher is out with the other friends, What would you do?";
                     optionButton1.Text = "No";
                     optionButton2.Text = "Explore";
                     break;
                 case 4:
+                    zombieNoisePlayer.Stop();
+                    cinamaticIntroPlayer.Play();
+                    Thread.Sleep(500);
+                    cinamaticIntroPlayer.Stop();
+                    zombieNoisePlayer.Play();
+
                     outputLabel.Text = "You and your friend started a movie but the noise is to irritating so you decide to go, check anyways";
                     Refresh();
                     Thread.Sleep(2000);
@@ -326,8 +347,7 @@ namespace Adventure_Project
                     outputLabel.Text = "The electricity ran out the last option is to run to them";
                     Refresh();
                     Thread.Sleep(2000);
-                    page = 10;
-
+                    outputLabel.Text = "You guys ran to your friends and told them everything";
                     break;
                 case 10:
                     outputLabel.Text = "You guys ran to your friends and told them everything";
@@ -454,15 +474,25 @@ namespace Adventure_Project
                 page = 25;
             }
         }
-        private void startButton_Click(object sender, EventArgs e)
+
+        private void outputLabel_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void startButton_Click_1(object sender, EventArgs e)
+        {
+            themePlayer.Stop();
+
             optionButton1.Show();
             optionButton2.Show();
 
             optionButton3.Hide();
-            startButton.Hide();
-            //pictureBox1.Hide();
-            //pictureBox2.Hide();
+            titleLabel2.Hide();
+
+            Button.Hide();
+            pictureBox1.Hide();
+            pictureBox2.Hide();
 
             optionButton1.Enabled = true;
             optionButton2.Enabled = true;

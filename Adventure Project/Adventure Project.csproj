@@ -65,6 +65,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -78,6 +79,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\The_Quarry_Title-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\01 The Quarry Main Theme.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\17 Time Passes-[AudioTrimmer.com].wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voicy_Zombies sound effect.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cinematic-intro-6097.wav" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
