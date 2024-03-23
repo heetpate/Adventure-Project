@@ -268,24 +268,6 @@ namespace Adventure_Project
             DisplayPage();
         }
 
-        private void startButton_Click(object sender, EventArgs e)
-        {
-            optionButton1.Show();
-            optionButton2.Show();
-
-            optionButton3.Hide();
-            startButton.Hide();
-            //pictureBox1.Hide();
-            //pictureBox2.Hide();
-
-            optionButton1.Enabled = true;
-            optionButton2.Enabled = true;
-            optionButton3.Enabled = true;
-
-            page = 1;
-
-            DisplayPage();
-        }
         private void DisplayPage()
         {
             switch (page)
@@ -428,16 +410,21 @@ namespace Adventure_Project
                     break;
                 case 23:
                     optionButton3.Hide();
+                    optionButton3.Enabled = false;
                     outputLabel.Text = "You and your friend were hunted by different creature\r\nPlay Again?";
                     optionButton1.Text = "Yes";
                     optionButton2.Text = "No";
                     break;
                 case 24:
+                    optionButton3.Hide();
+                    optionButton3.Enabled = false;
                     outputLabel.Text = "You were run out of bullets you died\r\nPlay Again?";
                     optionButton1.Text = "Yes";
                     optionButton2.Text = "No";
                     break;
                 case 25:
+                    optionButton3.Hide();
+                    optionButton3.Enabled = false;
                     outputLabel.Text = "You survived the night and was successful escaping ";
                     Refresh();
                     Thread.Sleep(2000);
@@ -467,6 +454,26 @@ namespace Adventure_Project
                 page = 25;
             }
         }
+        private void startButton_Click(object sender, EventArgs e)
+        {
+            optionButton1.Show();
+            optionButton2.Show();
+
+            optionButton3.Hide();
+            startButton.Hide();
+            //pictureBox1.Hide();
+            //pictureBox2.Hide();
+
+            optionButton1.Enabled = true;
+            optionButton2.Enabled = true;
+            optionButton3.Enabled = false;
+
+            page = 1;
+
+            DisplayPage();
+        }
     }
 }
+
+
 
