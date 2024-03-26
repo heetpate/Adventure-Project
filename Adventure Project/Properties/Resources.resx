@@ -118,6 +118,12 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Camping" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Camping.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="Campus" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\the-new-building-will-be-located-on-the-campus-of-the-university-ai-generated-free-photo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="cinematic_Intro" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\cinematic-intro-6097.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
@@ -138,6 +144,9 @@
   </data>
   <data name="Voicy_Door_Opening" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Voicy_Door opening sound effect -[AudioTrimmer.com].wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Voicy_Screaming_sound_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Voicy_Screaming sound effect-[AudioTrimmer.com].wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Voicy_Zombies_sound_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Voicy_Zombies sound effect-[AudioTrimmer.com].wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

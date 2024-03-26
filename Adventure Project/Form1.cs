@@ -25,9 +25,10 @@ namespace Adventure_Project
         SoundPlayer timePassPlayer = new SoundPlayer(Properties.Resources.time_Pass_Theme);
         SoundPlayer zombieNoisePlayer = new SoundPlayer(Properties.Resources.Voicy_Zombies_sound_);
         SoundPlayer cinamaticIntroPlayer = new SoundPlayer(Properties.Resources.cinematic_Intro);
-        SoundPlayer doorOpeningPlayer = new SoundPlayer(Properties.Resources.Voicy_Door_Opening);
+        SoundPlayer doorPlayer = new SoundPlayer(Properties.Resources.Voicy_Door_Opening);
         SoundPlayer phoneRingingPlayer = new SoundPlayer(Properties.Resources.Phone_Ringing_);
         SoundPlayer runningPlayer = new SoundPlayer(Properties.Resources.running_in_grass_);
+        SoundPlayer screamingPlayer = new SoundPlayer(Properties.Resources.Voicy_Screaming_sound_);
         public Form1()
         {
             InitializeComponent();
@@ -282,6 +283,8 @@ namespace Adventure_Project
             switch (page)
             {
                 case 1:
+                    pictureBox2.BackgroundImage = (Properties.Resources.Campus);
+
                     timePassPlayer.PlayLooping();
 
                     outputLabel.Text = "You are in a campus with you school friends they are planning to go outside at night for camp fire. Go outside or stay?";
@@ -289,8 +292,11 @@ namespace Adventure_Project
                     optionButton2.Text = "Stay"; 
                     break;
                 case 2:
+                    timePassPlayer.PlayLooping();
+
                     optionButton1.Visible = false;
                     optionButton2.Visible = false;
+
                     outputLabel.Text = "You light up the fire and having fun.";
                     Refresh();
                     Thread.Sleep(3000);
@@ -303,7 +309,6 @@ namespace Adventure_Project
                     optionButton2.Text = "Find a safe place and make a plan";
                     break;
                 case 3:
-                    timePassPlayer.Stop();
                     zombieNoisePlayer.PlayLooping();
 
                     outputLabel.Text = "You stayed with your friend and suddenly you hear strange sounds from the basement and your teacher is out with the other friends, What would you do?";
@@ -311,7 +316,6 @@ namespace Adventure_Project
                     optionButton2.Text = "Explore";
                     break;
                 case 4:
-                    zombieNoisePlayer.Stop();
                     cinamaticIntroPlayer.PlayLooping();
 
                     optionButton1.Visible = false;
@@ -319,45 +323,51 @@ namespace Adventure_Project
 
                     outputLabel.Text = "You and your friend started a movie but the noise is to irritating so you decide to go, check anyways";
                     Refresh();
-                    Thread.Sleep(3000);
+                    Thread.Sleep(3500);
 
-                    zombieNoisePlayer.PlayLooping();
                     optionButton1.Visible = true;
                     optionButton2.Visible = true;
 
+                    zombieNoisePlayer.PlayLooping();
+                    doorPlayer.PlayLooping();
+
                     outputLabel.Text = "You open the basement, it's pitch black and suddenly a strange looking creature jumped on your friend";
-                    zombieNoisePlayer.Play();
                     optionButton1.Text = "Save";
                     optionButton2.Text = "Get out of there";
                     break;
                 case 5:
-                    zombieNoisePlayer.Stop();
-                    doorOpeningPlayer.Play();
+                    doorPlayer.PlayLooping();
 
                     outputLabel.Text = "You open the basement, it's pitch black and suddenly a strange looking creature jumped on you friend";
-                    zombieNoisePlayer.Play();
-                    doorOpeningPlayer.Stop();
+                   
+                    zombieNoisePlayer.PlayLooping();
+                    doorPlayer.Stop();
+
                     optionButton1.Text = "Save";
                     optionButton2.Text = "Get out of there";
                     break;
                 case 6:
-                    zombieNoisePlayer.Stop();
-                    themePlayer.Play();
+                    themePlayer.PlayLooping();
+
                     outputLabel.Text = "You die saving your friend\r\nYour a TRUE FRIEND! \r\n Play Again";
                     optionButton1.Text = "Yes ";
                     optionButton2.Text = "No";
                     break;
                 case 7:
-                    themePlayer.Stop();
-                    doorOpeningPlayer.Play();
+                    doorPlayer.PlayLooping();
+
                     outputLabel.Text = "You lived...\r\nYou locked the basement.";
-                    doorOpeningPlayer.Stop();
+                   
+                    doorPlayer.Stop();
                     optionButton1.Text = "Call";
                     optionButton2.Text = "Run";
                     break;
                 case 8:
+                    doorPlayer.PlayLooping();
+
                     outputLabel.Text = "You locked the basement";
-                    doorOpeningPlayer.Stop();
+
+                    doorPlayer.Stop();
 
                     optionButton1.Visible = false;
                     optionButton2.Visible = false;
@@ -371,11 +381,9 @@ namespace Adventure_Project
                     outputLabel.Text = "Are you going to call your friends or run to your friends?";
                     optionButton1.Text = "Run";
                     optionButton2.Text = "Call";
-                    phoneRingingPlayer.Play();
                     break;
                 case 9:
-                    phoneRingingPlayer.Stop();
-                    runningPlayer.Play();
+                    phoneRingingPlayer.PlayLooping();
 
                     optionButton1.Visible = false;
                     optionButton2.Visible = false;
@@ -383,46 +391,45 @@ namespace Adventure_Project
                     outputLabel.Text = "The electricity ran out the last option is to run to them";
                     Refresh();
                     Thread.Sleep(2000);
-                    runningPlayer.Stop();
-
-                    optionButton1.Visible = true;
-                    optionButton2.Visible = true;
 
                     outputLabel.Text = "You ran to your friends and told them everything";
-                    runningPlayer.Play();
+                    
+                    runningPlayer.PlayLooping();
                     break;
                 case 10:
                     outputLabel.Text = "You ran to your friends and told them everything";
+                   
+                    runningPlayer.PlayLooping();
+
                     optionButton1.Text = "Run right away";
-                    runningPlayer.Play();
-                    themePlayer.Play();
                     optionButton2.Text = "Find a safe place and make a plan";
-                    runningPlayer.Stop();
-                    timePassPlayer.Play();
-                    themePlayer.Stop();
                     break;
                 case 11:
-                    zombieNoisePlayer.Play();
-                    outputLabel.Text = "You and your friends got chased and killed by scary looking creature. \r\n Play Again?";
-                    zombieNoisePlayer.Stop();
-                    timePassPlayer.Play();
+                    runningPlayer.PlayLooping();
+                    zombieNoisePlayer.PlayLooping();
+
+                    outputLabel.Text = "You and your friends got chased and killed by a scary looking creature. \r\n Play Again?";
+                   
+                    timePassPlayer.PlayLooping();
                     optionButton1.Text = "Yes";
                     optionButton2.Text = "No";
-                    timePassPlayer.Stop();
                     break;
                 case 12:
-                    themePlayer.Play();
+                    themePlayer.PlayLooping();
+                    timePassPlayer.PlayLooping();
+
                     outputLabel.Text = "You find a house where no one lives there but to keep yourself alive you decide to break into it";
                     optionButton1.Text = "Explore";
                     optionButton2.Text = "No";
                     break;
                 case 13:
-                    themePlayer.Stop();
+                    themePlayer.PlayLooping();
+                    timePassPlayer.PlayLooping();
 
                     optionButton1.Visible = false;
                     optionButton2.Visible = false;
 
-                    outputLabel.Text = "Your safe! \r\nYou also find a gun, some food and water for temporary, the map to escape.";
+                    outputLabel.Text = "You're safe! \r\nYou also find a gun, some food and water for temporary, the map to escape.";
                     Refresh();
                     Thread.Sleep(2000);
 
@@ -430,15 +437,24 @@ namespace Adventure_Project
                     optionButton2.Visible = true;
 
                     outputLabel.Text = "Your plan is to wait for the electricity to call or go outside and escape yourself";
+                   
+                    themePlayer.PlayLooping();
+                    timePassPlayer.PlayLooping();
+
                     optionButton1.Text = "Wait";
                     optionButton2.Text = "Try escaping";
                     break;
                 case 14:
+                    zombieNoisePlayer.PlayLooping();
+                    screamingPlayer.PlayLooping();
+
                     outputLabel.Text = "The next day you were killed by the creature\r\nPlay Again?";
                     optionButton1.Text = "Yes";
                     optionButton2.Text = "No";
                     break;
                 case 15:
+                    zombieNoisePlayer.PlayLooping();
+
                     outputLabel.Text = "You have waited to long, your resources ran out and the electricity hasn't came you died\r\nPlay Again?";
                     optionButton1.Text = "No";
                     optionButton2.Text = "Yes";
@@ -447,18 +463,24 @@ namespace Adventure_Project
                     optionButton1.Visible = false;
                     optionButton2.Visible = false;
 
+                    themePlayer.PlayLooping();
+                    timePassPlayer.PlayLooping();
+
                     outputLabel.Text = "According to the map you are on the way to escape. In the morning you realize there is no creature roaming around";
                     Refresh();
                     Thread.Sleep(3000);
 
                     optionButton1.Visible = true;
                     optionButton2.Visible = true;
-
+                    
                     outputLabel.Text = "They are planning to reach a small hotel and according to the map it will take them 10 hours walk and 6 hours car";
                     optionButton1.Text = "Walk";
                     optionButton2.Text = "Find a Car nearby";
                     break;
                 case 17:
+                    zombieNoisePlayer.PlayLooping();
+                    screamingPlayer.PlayLooping();
+
                     outputLabel.Text = "You ran out of resources and wasn't able to reach the hotel before evening you got hunted\r\nPlay Again?";
                     optionButton1.Text = "Yes";
                     optionButton2.Text = "No";
@@ -466,6 +488,9 @@ namespace Adventure_Project
                 case 18:
                     optionButton1.Visible = false;
                     optionButton2.Visible = false;
+
+                    themePlayer.PlayLooping();
+                    timePassPlayer.PlayLooping();
 
                     outputLabel.Text = "You found a car after 3 and half hours of walking you have to go 2 more";
                     Refresh();
@@ -477,26 +502,44 @@ namespace Adventure_Project
                     optionButton1.Visible = true;
                     optionButton2.Visible = true;
 
+                    zombieNoisePlayer.PlayLooping();
+                    screamingPlayer.PlayLooping();
+
                     outputLabel.Text = "You saw a creature trying to chase you  but lucky you ended up saving yourself in a room. The next morning you saw no creature outside so that made you wonder why the creature are not seen but they can in the night. There is a gas station nearby";
                     optionButton1.Text = "It's fine, keep going";
                     optionButton2.Text = "Fuel";
                     break;
                 case 19:
+                    themePlayer.PlayLooping();
+                    timePassPlayer.PlayLooping();
+
                     outputLabel.Text = "The car stopped mid way and no shelter was there you died\r\nPlay Again?";
                     optionButton1.Text = "Yes";
                     optionButton2.Text = "No";
                     break;
                 case 20:
+                    themePlayer.PlayLooping();
+                    timePassPlayer.PlayLooping();
+
                     outputLabel.Text = "You were close to escaping but suddenly your car got in engine problem ";
                     optionButton1.Text = "Fix it";
                     optionButton2.Text = "Walk 2 hours and escape";
                     break;
                 case 21:
-                    outputLabel.Text = "You tried but too late\r\nPlay Again?";
+                    themePlayer.PlayLooping();
+                    zombieNoisePlayer.PlayLooping();
+                    timePassPlayer.PlayLooping();
+
+                    outputLabel.Text = "You tried but too late\nPlay Again?";
+                   
                     optionButton1.Text = "Yes";
                     optionButton2.Text = "No";
                     break;
                 case 22:
+                    themePlayer.PlayLooping();
+                    timePassPlayer.PlayLooping();
+                    zombieNoisePlayer.PlayLooping();
+
                     optionButton3.Visible = true;
                     outputLabel.Text = "You chose walk for 2 hours but it turn evening and creature are getting outside";
                     optionButton1.Text = "Run Separate";
@@ -505,18 +548,28 @@ namespace Adventure_Project
                     break;
                 case 23:
                     optionButton3.Visible = false;
-                    outputLabel.Text = "You and your friend were hunted by different creature\r\nPlay Again?";
+
+                    screamingPlayer.PlayLooping();
+                    zombieNoisePlayer.PlayLooping();
+
+                    outputLabel.Text = "You and your friend were hunted by different creature\nPlay Again?";
                     optionButton1.Text = "Yes";
                     optionButton2.Text = "No";
                     break;
                 case 24:
-                    outputLabel.Text = "You were run out of bullets you died\r\nPlay Again?";
+                    zombieNoisePlayer.PlayLooping();
+                    screamingPlayer.PlayLooping();
+
+                    outputLabel.Text = "You were run out of bullets you died\nPlay Again?";
                     optionButton1.Text = "Yes";
                     optionButton2.Text = "No";
                     break;
                 case 25:
                     optionButton1.Visible = false;
                     optionButton2.Visible = false;
+
+                    themePlayer.PlayLooping();
+                    timePassPlayer.PlayLooping();
 
                     outputLabel.Text = "You survived the night and was successful escaping ";
                     Refresh();
@@ -530,6 +583,9 @@ namespace Adventure_Project
                     optionButton2.Text = "No";
                     break;
                 case 99:
+                    themePlayer.PlayLooping();
+                    timePassPlayer.PlayLooping();
+
                     outputLabel.Text = "Thanks for playing!";
                     optionButton1.Text = "";
                     optionButton2.Text = "";
@@ -569,7 +625,7 @@ namespace Adventure_Project
 
             startButton.Hide();
             pictureBox1.Hide();
-            pictureBox2.Hide();
+            
 
             optionButton1.Enabled = true;
             optionButton2.Enabled = true;

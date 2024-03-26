@@ -107,5 +107,17 @@
   <ItemGroup>
     <None Include="Resources\running-in-grass-6237.wav" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Voicy_Screaming sound effect-[AudioTrimmer.com].wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camping.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Camping.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the-new-building-will-be-located-on-the-campus-of-the-university-ai-generated-free-photo.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

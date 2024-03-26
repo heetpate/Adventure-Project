@@ -61,6 +61,26 @@ namespace Adventure_Project.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Camping {
+            get {
+                object obj = ResourceManager.GetObject("Camping", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Campus {
+            get {
+                object obj = ResourceManager.GetObject("Campus", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream cinematic_Intro {
@@ -121,6 +141,15 @@ namespace Adventure_Project.Properties {
         internal static System.IO.UnmanagedMemoryStream Voicy_Door_Opening {
             get {
                 return ResourceManager.GetStream("Voicy_Door_Opening", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream Voicy_Screaming_sound_ {
+            get {
+                return ResourceManager.GetStream("Voicy_Screaming_sound_", resourceCulture);
             }
         }
         
