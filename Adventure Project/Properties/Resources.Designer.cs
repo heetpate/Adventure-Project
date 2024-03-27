@@ -63,9 +63,9 @@ namespace Adventure_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Camping {
+        internal static System.Drawing.Bitmap Camping_With_Friends {
             get {
-                object obj = ResourceManager.GetObject("Camping", resourceCulture);
+                object obj = ResourceManager.GetObject("Camping_With_Friends", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

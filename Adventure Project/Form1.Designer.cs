@@ -99,7 +99,7 @@
             this.titleLabel2.AutoSize = true;
             this.titleLabel2.Font = new System.Drawing.Font("Viner Hand ITC", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.titleLabel2.ForeColor = System.Drawing.Color.Red;
-            this.titleLabel2.Location = new System.Drawing.Point(463, 139);
+            this.titleLabel2.Location = new System.Drawing.Point(500, 37);
             this.titleLabel2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.titleLabel2.Name = "titleLabel2";
             this.titleLabel2.Size = new System.Drawing.Size(228, 36);
@@ -110,10 +110,10 @@
             // 
             this.pictureBox2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox2.BackgroundImage")));
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox2.Location = new System.Drawing.Point(19, 24);
+            this.pictureBox2.Location = new System.Drawing.Point(19, 57);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(2);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(290, 394);
+            this.pictureBox2.Size = new System.Drawing.Size(290, 361);
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
@@ -129,10 +129,10 @@
             // 
             // startButton
             // 
-            this.startButton.Location = new System.Drawing.Point(504, 202);
+            this.startButton.Location = new System.Drawing.Point(488, 185);
             this.startButton.Margin = new System.Windows.Forms.Padding(2);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(62, 32);
+            this.startButton.Size = new System.Drawing.Size(78, 49);
             this.startButton.TabIndex = 11;
             this.startButton.Text = "Start";
             this.startButton.UseVisualStyleBackColor = true;

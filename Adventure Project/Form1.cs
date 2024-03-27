@@ -38,6 +38,10 @@ namespace Adventure_Project
             optionButton1.Enabled = false;
             optionButton2.Enabled = false;
             optionButton3.Enabled = false;
+
+            optionButton1.Hide();
+            optionButton2.Hide();
+            optionButton3.Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -292,8 +296,9 @@ namespace Adventure_Project
                     optionButton2.Text = "Stay"; 
                     break;
                 case 2:
-                    timePassPlayer.PlayLooping();
+                    pictureBox2.BackgroundImage = (Properties.Resources.Camping_With_Friends);
 
+                    timePassPlayer.PlayLooping();
                     optionButton1.Visible = false;
                     optionButton2.Visible = false;
 
@@ -341,7 +346,6 @@ namespace Adventure_Project
                     outputLabel.Text = "You open the basement, it's pitch black and suddenly a strange looking creature jumped on you friend";
                    
                     zombieNoisePlayer.PlayLooping();
-                    doorPlayer.Stop();
 
                     optionButton1.Text = "Save";
                     optionButton2.Text = "Get out of there";
@@ -357,8 +361,7 @@ namespace Adventure_Project
                     doorPlayer.PlayLooping();
 
                     outputLabel.Text = "You lived...\r\nYou locked the basement.";
-                   
-                    doorPlayer.Stop();
+
                     optionButton1.Text = "Call";
                     optionButton2.Text = "Run";
                     break;
@@ -617,9 +620,8 @@ namespace Adventure_Project
         {
             themePlayer.Stop();
 
-            optionButton1.Show();
-            optionButton2.Show();
-
+            optionButton1.Hide();
+            optionButton2.Hide();
             optionButton3.Hide();
             titleLabel2.Hide();
 
