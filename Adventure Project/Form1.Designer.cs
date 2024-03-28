@@ -1,6 +1,6 @@
 ﻿namespace Adventure_Project
 {
-    partial class Form1
+    partial class theQuarry
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(theQuarry));
             this.optionButton1 = new System.Windows.Forms.Button();
             this.optionButton3 = new System.Windows.Forms.Button();
             this.optionButton2 = new System.Windows.Forms.Button();
@@ -118,10 +118,13 @@
             // 
             // startButton
             // 
+            this.startButton.BackgroundImage = global::Adventure_Project.Properties.Resources._750c510be332763dac1633985508edce;
+            this.startButton.Font = new System.Drawing.Font("Stencil", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startButton.ForeColor = System.Drawing.Color.Transparent;
             this.startButton.Location = new System.Drawing.Point(488, 185);
             this.startButton.Margin = new System.Windows.Forms.Padding(2);
             this.startButton.Name = "startButton";
-            this.startButton.Size = new System.Drawing.Size(78, 49);
+            this.startButton.Size = new System.Drawing.Size(96, 58);
             this.startButton.TabIndex = 11;
             this.startButton.Text = "Start";
             this.startButton.UseVisualStyleBackColor = true;
@@ -138,7 +141,7 @@
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
             // 
-            // Form1
+            // theQuarry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -152,9 +155,10 @@
             this.Controls.Add(this.optionButton1);
             this.Controls.Add(this.optionButton2);
             this.Controls.Add(this.optionButton3);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "theQuarry";
+            this.Text = "The Quarry";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

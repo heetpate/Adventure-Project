@@ -63,9 +63,19 @@ namespace Adventure_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _911Image {
+        internal static System.Drawing.Bitmap _750c510be332763dac1633985508edce {
             get {
-                object obj = ResourceManager.GetObject("911Image", resourceCulture);
+                object obj = ResourceManager.GetObject("750c510be332763dac1633985508edce", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _911 {
+            get {
+                object obj = ResourceManager.GetObject("911", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -101,6 +111,16 @@ namespace Adventure_Project.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap car {
+            get {
+                object obj = ResourceManager.GetObject("car", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.IO.UnmanagedMemoryStream similar to System.IO.MemoryStream.
         /// </summary>
         internal static System.IO.UnmanagedMemoryStream cinematic_Intro {
@@ -125,6 +145,16 @@ namespace Adventure_Project.Properties {
         internal static System.Drawing.Bitmap house {
             get {
                 object obj = ResourceManager.GetObject("house", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap mapToEscape {
+            get {
+                object obj = ResourceManager.GetObject("mapToEscape", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -180,6 +210,16 @@ namespace Adventure_Project.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap starter {
+            get {
+                object obj = ResourceManager.GetObject("starter", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap strangeLookingCreature {
             get {
                 object obj = ResourceManager.GetObject("strangeLookingCreature", resourceCulture);
@@ -202,6 +242,16 @@ namespace Adventure_Project.Properties {
         internal static System.Drawing.Bitmap The_Quarry_Title_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("The_Quarry_Title-removebg-preview", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap theEndTitle {
+            get {
+                object obj = ResourceManager.GetObject("theEndTitle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

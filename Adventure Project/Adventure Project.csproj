@@ -146,5 +146,23 @@
   <ItemGroup>
     <None Include="Resources\image-asset.jpeg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_93534546_pmb5i96tev1mv3EMZgkVOJuNBlZcHwnx.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Scary-Map-London-Ghosts-1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\pngimg.com - toyota_PNG1917.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\header.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\d224b617a5bfa4c4d092f5fc97fc6135.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\750c510be332763dac1633985508edce.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

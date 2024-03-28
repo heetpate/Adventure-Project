@@ -11,9 +11,13 @@ using System.Threading;
 using System.Media;
 using System.Drawing.Text;
 
+//March 27, 2024
+//The Quarry
+//Heet Patel
+
 namespace Adventure_Project
 {
-    public partial class Form1 : Form
+    public partial class theQuarry : Form
     {
         // Tracks the page of the story the user is on
         int page = 1;
@@ -29,7 +33,7 @@ namespace Adventure_Project
         SoundPlayer phoneRingingPlayer = new SoundPlayer(Properties.Resources.Phone_Ringing_);
         SoundPlayer runningPlayer = new SoundPlayer(Properties.Resources.running_in_grass_);
         SoundPlayer screamingPlayer = new SoundPlayer(Properties.Resources.Voicy_Screaming_sound_);
-        public Form1()
+        public theQuarry()
         {
             InitializeComponent();
 
@@ -398,6 +402,8 @@ namespace Adventure_Project
                     optionButton1.Visible = true;
                     optionButton2.Visible = true;
 
+                    pictureBox2.BackgroundImage = (Properties.Resources._911);
+
                     outputLabel.Text = "Are you going to call your friends or run to your friends?";
                     optionButton1.Text = "Run";
                     optionButton2.Text = "Call";
@@ -405,20 +411,23 @@ namespace Adventure_Project
                 case 9:
                     phoneRingingPlayer.PlayLooping();
 
-                    optionButton1.Visible = false;
-                    optionButton2.Visible = false;
+                    optionButton1.Visible = true;
+                    optionButton2.Visible = true;
+
+                    pictureBox2.BackgroundImage = (Properties.Resources.running);
 
                     outputLabel.Text = "The electricity ran out the last option is to run to them";
                     Refresh();
                     Thread.Sleep(2000);
 
-                    pictureBox2.BackgroundImage = (Properties.Resources.running);
-
                     outputLabel.Text = "You ran to your friends and told them everything";
-                    
+
+                    optionButton1.Text = "Run right away";
+                    optionButton2.Text = "Find a safe place and make a plan";
+
                     runningPlayer.PlayLooping();
                     break;
-                case 10
+                case 10:
                     pictureBox2.BackgroundImage = (Properties.Resources.running);
 
                     outputLabel.Text = "You ran to your friends and told them everything";
@@ -465,6 +474,8 @@ namespace Adventure_Project
                     optionButton1.Visible = true;
                     optionButton2.Visible = true;
 
+                    pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
+
                     outputLabel.Text = "Your plan is to wait for the electricity to call or go outside and escape yourself";
                    
                     themePlayer.PlayLooping();
@@ -499,13 +510,17 @@ namespace Adventure_Project
                     themePlayer.PlayLooping();
                     timePassPlayer.PlayLooping();
 
+                    pictureBox2.BackgroundImage = (Properties.Resources.mapToEscape);
+
                     outputLabel.Text = "According to the map you are on the way to escape. In the morning you realize there is no creature roaming around";
                     Refresh();
                     Thread.Sleep(3000);
 
                     optionButton1.Visible = true;
                     optionButton2.Visible = true;
-                    
+
+                    pictureBox2.BackgroundImage = (Properties.Resources.house);
+
                     outputLabel.Text = "They are planning to reach a small hotel and according to the map it will take them 10 hours walk and 6 hours car";
                     optionButton1.Text = "Walk";
                     optionButton2.Text = "Find a Car nearby";
@@ -513,6 +528,8 @@ namespace Adventure_Project
                 case 17:
                     zombieNoisePlayer.PlayLooping();
                     screamingPlayer.PlayLooping();
+
+                    pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
 
                     outputLabel.Text = "You ran out of resources and wasn't able to reach the hotel before evening you got hunted\r\nPlay Again?";
                     optionButton1.Text = "Yes";
@@ -525,9 +542,14 @@ namespace Adventure_Project
                     themePlayer.PlayLooping();
                     timePassPlayer.PlayLooping();
 
+                    pictureBox2.BackgroundImage = (Properties.Resources.car);
+
                     outputLabel.Text = "You found a car after 3 and half hours of walking you have to go 2 more";
                     Refresh();
                     Thread.Sleep(3000);
+
+                    pictureBox2.BackgroundImage = (Properties.Resources.house);
+
                     outputLabel.Text = "You reached the hotel successfully and safely but as you were going to it you saw blood and dead bodies of people.";
                     Refresh();
                     Thread.Sleep(3000);
@@ -538,6 +560,8 @@ namespace Adventure_Project
                     zombieNoisePlayer.PlayLooping();
                     screamingPlayer.PlayLooping();
 
+                    pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
+
                     outputLabel.Text = "You saw a creature trying to chase you  but lucky you ended up saving yourself in a room. The next morning you saw no creature outside so that made you wonder why the creature are not seen but they can in the night. There is a gas station nearby";
                     optionButton1.Text = "It's fine, keep going";
                     optionButton2.Text = "Fuel";
@@ -545,6 +569,8 @@ namespace Adventure_Project
                 case 19:
                     themePlayer.PlayLooping();
                     timePassPlayer.PlayLooping();
+
+                    pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
 
                     outputLabel.Text = "The car stopped mid way and no shelter was there you died\r\nPlay Again?";
                     optionButton1.Text = "Yes";
@@ -554,6 +580,8 @@ namespace Adventure_Project
                     themePlayer.PlayLooping();
                     timePassPlayer.PlayLooping();
 
+                    pictureBox2.BackgroundImage = (Properties.Resources.car);
+
                     outputLabel.Text = "You were close to escaping but suddenly your car got in engine problem ";
                     optionButton1.Text = "Fix it";
                     optionButton2.Text = "Walk 2 hours and escape";
@@ -562,6 +590,8 @@ namespace Adventure_Project
                     themePlayer.PlayLooping();
                     zombieNoisePlayer.PlayLooping();
                     timePassPlayer.PlayLooping();
+
+                    pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
 
                     outputLabel.Text = "You tried but too late\nPlay Again?";
                    
@@ -576,6 +606,8 @@ namespace Adventure_Project
                     optionButton3.Visible = true;
                     optionButton3.Enabled = true;
 
+                   pictureBox2.BackgroundImage = (Properties.Resources.running);
+
                     outputLabel.Text = "You chose walk for 2 hours but it turn evening and creature are getting outside";
                     optionButton1.Text = "Run Separate";
                     optionButton2.Text = "Pull out a gun and stay together";
@@ -587,13 +619,19 @@ namespace Adventure_Project
                     screamingPlayer.PlayLooping();
                     zombieNoisePlayer.PlayLooping();
 
+                    pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
+
                     outputLabel.Text = "You and your friend were hunted by different creature\nPlay Again?";
                     optionButton1.Text = "Yes";
                     optionButton2.Text = "No";
                     break;
                 case 24:
+                    optionButton3.Visible = false;
+
                     zombieNoisePlayer.PlayLooping();
                     screamingPlayer.PlayLooping();
+
+                    pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
 
                     outputLabel.Text = "You were run out of bullets you died\nPlay Again?";
                     optionButton1.Text = "Yes";
@@ -602,6 +640,7 @@ namespace Adventure_Project
                 case 25:
                     optionButton1.Visible = false;
                     optionButton2.Visible = false;
+                    optionButton3.Visible = false;
 
                     themePlayer.PlayLooping();
                     timePassPlayer.PlayLooping();
@@ -613,11 +652,15 @@ namespace Adventure_Project
                     optionButton1.Visible = true;
                     optionButton2.Visible = true;
 
+                    pictureBox2.BackgroundImage = (Properties.Resources.theEndTitle);
+
                     outputLabel.Text = "Game over \r\nPart 2 coming soon!\r\nPlay Again?";
                     optionButton1.Text = "Yes";
                     optionButton2.Text = "No";
                     break;
                 case 99:
+                    optionButton3.Visible = false;
+
                     themePlayer.PlayLooping();
                     timePassPlayer.PlayLooping();
 
@@ -641,6 +684,8 @@ namespace Adventure_Project
             {
                 page = 25;
             }
+
+            DisplayPage();
         }
 
         private void outputLabel_Click(object sender, EventArgs e)
