@@ -122,5 +122,29 @@
   <ItemGroup>
     <None Include="Resources\Camping-With-Friends-min.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\360_F_573429285_vngYBw6S5qQkKGLsur4zbTk3GM9kOz4K.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\best-strains-high-movie-watching.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\the-unxplained-strange-creatures-goat-sucker-5.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eery-1648250_1280.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\istockphoto-108194985-612x612.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Start Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\depositphotos_209422898-stock-video-gun-table-moving-shot.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\image-asset.jpeg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

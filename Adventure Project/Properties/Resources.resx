@@ -118,29 +118,32 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="Camping_With_Friends" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Camping-With-Friends-min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="basement" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\360_F_573429285_vngYBw6S5qQkKGLsur4zbTk3GM9kOz4K.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="running" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eery-1648250_1280.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="strangeLookingCreature" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\the-unxplained-strange-creatures-goat-sucker-5.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Campus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\the-new-building-will-be-located-on-the-campus-of-the-university-ai-generated-free-photo.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cinematic_Intro" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cinematic-intro-6097.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
   <data name="Phone_Ringing_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Phone_Ringing_8x-Mike_Koenig-696238708 (1).wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Camping_With_Friends" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Camping-With-Friends-min.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="movie" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\best-strains-high-movie-watching.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="running_in_grass_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\running-in-grass-6237.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="the_Quarry_Main_Theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\01 The Quarry Main Theme.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="The_Quarry_Title-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\The_Quarry_Title-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="time_Pass_Theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\17 Time Passes-[AudioTrimmer.com].wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="Voicy_Zombies_sound_" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Voicy_Zombies sound effect-[AudioTrimmer.com].wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="Voicy_Door_Opening" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Voicy_Door opening sound effect -[AudioTrimmer.com].wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
@@ -148,7 +151,28 @@
   <data name="Voicy_Screaming_sound_" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Voicy_Screaming sound effect-[AudioTrimmer.com].wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="Voicy_Zombies_sound_" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Voicy_Zombies sound effect-[AudioTrimmer.com].wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="the_Quarry_Main_Theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\01 The Quarry Main Theme.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="cinematic_Intro" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cinematic-intro-6097.wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="house" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\istockphoto-108194985-612x612.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="The_Quarry_Title-removebg-preview" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\The_Quarry_Title-removebg-preview.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="time_Pass_Theme" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\17 Time Passes-[AudioTrimmer.com].wav;System.IO.MemoryStream, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Start Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Start Image.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="911Image" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\image-asset.jpeg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="gun" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\depositphotos_209422898-stock-video-gun-table-moving-shot.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
