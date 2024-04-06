@@ -25,6 +25,7 @@ namespace Adventure_Project
         //Random number generator
         Random randGen = new Random();
 
+        //All the soundPlayer in different cases
         SoundPlayer themePlayer = new SoundPlayer(Properties.Resources.the_Quarry_Main_Theme);
         SoundPlayer timePassPlayer = new SoundPlayer(Properties.Resources.time_Pass_Theme);
         SoundPlayer zombieNoisePlayer = new SoundPlayer(Properties.Resources.Voicy_Zombies_sound_);
@@ -36,8 +37,6 @@ namespace Adventure_Project
         public theQuarry()
         {
             InitializeComponent();
-
-            themePlayer.PlayLooping();
 
             optionButton1.Enabled = false;
             optionButton2.Enabled = false;
@@ -54,6 +53,8 @@ namespace Adventure_Project
         }
 
         private void optionButton1_Click(object sender, EventArgs e)
+            // The first button function of to direct where it takes the story
+            //each button has it's own way
         {
             if (page == 1)
             {
@@ -67,7 +68,7 @@ namespace Adventure_Project
             {
                 page = 4;
             }
-            else if (page == 4)
+            else if (page == 4) //random generatory for saving freind or not with 40% of chance. 
             {
                 int randValue = randGen.Next(1, 41);
 
@@ -80,7 +81,7 @@ namespace Adventure_Project
                     page = 7;
                 }
             }
-            else if (page == 5)
+            else if (page == 5) //repeat of same thing from different direction 
             {
                 int randValue = randGen.Next(1, 41);
 
@@ -99,7 +100,7 @@ namespace Adventure_Project
             }
             else if (page == 7)
             {
-                page = 10; //watch out for this one look at this option in the flowchart
+                page = 10;
             }
             else if (page == 8)
             {
@@ -174,11 +175,12 @@ namespace Adventure_Project
             {
                 page = 1;
             }
-
-            DisplayPage();
+            
+            DisplayPage();  //to display the first button and story path
         }
 
         private void optionButton2_Click(object sender, EventArgs e)
+        // The second button function of to direct where it takes the story
         {
             if (page == 1)
             {
@@ -214,7 +216,7 @@ namespace Adventure_Project
             }
             else if (page == 9)
             {
-                page = 10; //correct this statement
+                page = 10;
             }
             else if (page == 10)
             {
@@ -232,7 +234,7 @@ namespace Adventure_Project
             }
             else if (page == 13)
             {
-                page = 16; //correct this statement
+                page = 16; 
             }
             else if (page == 14)
             {
@@ -282,85 +284,86 @@ namespace Adventure_Project
             {
                 page = 99;
             }
-
-            DisplayPage();
+            
+            DisplayPage(); // to display the second button and the story path
         }
 
         private void DisplayPage()
+            //All the Pages from top will have outputs  
         {
             switch (page)
             {
-                case 1:
+                case 1: //case 1 == page 1 and same for other cases
                     pictureBox2.BackgroundImage = (Properties.Resources.Campus);
 
-                    timePassPlayer.PlayLooping();
+                    timePassPlayer.PlayLooping(); //this will keep looping until they don't choose one of this options
 
-                    optionButton1.Visible = true;
+                    optionButton1.Visible = true; //the button will be visible for player to select it
                     optionButton2.Visible = true;
 
-                    outputLabel.Text = "You are in a campus with you school friends they are planning to go outside at night for camp fire. Go outside or stay?";
-                    optionButton1.Text = "Outside";
+                    outputLabel.Text = "You are on a campus with your school friends they are planning to go outside at night for campfire. Go outside or stay?";
+                    optionButton1.Text = "Outside"; 
                     optionButton2.Text = "Stay"; 
                     break;
                 case 2:
                     pictureBox2.BackgroundImage = (Properties.Resources.Camping_With_Friends);
 
                     timePassPlayer.PlayLooping();
-                    optionButton1.Visible = false;
+                    optionButton1.Visible = false; //this will allow the player to not select any option before they read the whole text and the upcoming text
                     optionButton2.Visible = false;
 
-                    outputLabel.Text = "You light up the fire and having fun.";
+                    outputLabel.Text = "You light up the fire and have fun.";
                     Refresh();
-                    Thread.Sleep(3000);
+                    Thread.Sleep(3000); // times for the player to read it and time for other output to appear.
 
                     optionButton1.Visible = true;
                     optionButton2.Visible = true;
 
-                    outputLabel.Text = "Your friend ran to you and tells you everything that happened";
+                    outputLabel.Text = "Your friend ran to you and told you everything that happened";
                     optionButton1.Text = "Run right away ";
                     optionButton2.Text = "Find a safe place and make a plan";
                     break;
                 case 3:
-                    pictureBox2.BackgroundImage = (Properties.Resources.basement);
+                    pictureBox2.BackgroundImage = (Properties.Resources.basement); //images in each cases depending on the story
 
                     zombieNoisePlayer.PlayLooping();
 
-                    outputLabel.Text = "You stayed with your friend and suddenly you hear strange sounds from the basement and your teacher is out with the other friends, What would you do?";
+                    outputLabel.Text = "You stay with your friend and suddenly hear strange sounds from the basement and your teacher is out with the other friends, What would you do?";
                     optionButton1.Text = "No";
                     optionButton2.Text = "Explore";
                     break;
                 case 4:
-                    cinamaticIntroPlayer.PlayLooping();
+                    cinamaticIntroPlayer.Play();
 
                     optionButton1.Visible = false;
                     optionButton2.Visible = false;
 
                     pictureBox2.BackgroundImage = (Properties.Resources.movie);
 
-                    outputLabel.Text = "You and your friend started a movie but the noise is to irritating so you decide to go, check anyways";
+                    outputLabel.Text = "You and your friend start a movie but the noise is too irritating so you decide to go, check anyway";
                     Refresh();
-                    Thread.Sleep(3500);
+                    Thread.Sleep(4000);
 
                     optionButton1.Visible = true;
                     optionButton2.Visible = true;
 
-                    zombieNoisePlayer.PlayLooping();
-                    doorPlayer.PlayLooping();
+                    zombieNoisePlayer.Play();
+                    doorPlayer.Play();
 
                     pictureBox2.BackgroundImage = (Properties.Resources.basement);
 
-                    outputLabel.Text = "You open the basement, it's pitch black and suddenly a strange looking creature jumped on your friend";
+                    outputLabel.Text = "You open the basement, pitch black and suddenly a strange-looking creature jumps on your friend";
                     optionButton1.Text = "Save";
                     optionButton2.Text = "Get out of there";
                     break;
                 case 5:
-                    doorPlayer.PlayLooping();
+                    doorPlayer.Play(); //sometime will only have play because don't want to repeat it many times
 
                     pictureBox2.BackgroundImage = (Properties.Resources.basement);
 
-                    outputLabel.Text = "You open the basement, it's pitch black and suddenly a strange looking creature jumped on you friend";
+                    outputLabel.Text = "You open the basement, pitch black and suddenly a strange-looking creature jumps on you friend";
                    
-                    zombieNoisePlayer.PlayLooping();
+                    zombieNoisePlayer.Play();
 
                     optionButton1.Text = "Save";
                     optionButton2.Text = "Get out of there";
@@ -375,7 +378,7 @@ namespace Adventure_Project
                     optionButton2.Text = "No";
                     break;
                 case 7:
-                    doorPlayer.PlayLooping();
+                    doorPlayer.Play();
 
                     pictureBox2.BackgroundImage = (Properties.Resources.basement);
 
@@ -385,7 +388,7 @@ namespace Adventure_Project
                     optionButton2.Text = "Run";
                     break;
                 case 8:
-                    doorPlayer.PlayLooping();
+                    doorPlayer.Play();
 
                     pictureBox2.BackgroundImage = (Properties.Resources.basement);
 
@@ -397,7 +400,7 @@ namespace Adventure_Project
                     optionButton2.Visible = false;
 
                     Refresh();
-                    Thread.Sleep(1500);
+                    Thread.Sleep(2000);
 
                     optionButton1.Visible = true;
                     optionButton2.Visible = true;
@@ -409,7 +412,7 @@ namespace Adventure_Project
                     optionButton2.Text = "Call";
                     break;
                 case 9:
-                    phoneRingingPlayer.PlayLooping();
+                    phoneRingingPlayer.Play();
 
                     optionButton1.Visible = true;
                     optionButton2.Visible = true;
@@ -418,31 +421,31 @@ namespace Adventure_Project
 
                     outputLabel.Text = "The electricity ran out the last option is to run to them";
                     Refresh();
-                    Thread.Sleep(2000);
+                    Thread.Sleep(3000);
 
                     outputLabel.Text = "You ran to your friends and told them everything";
 
                     optionButton1.Text = "Run right away";
                     optionButton2.Text = "Find a safe place and make a plan";
 
-                    runningPlayer.PlayLooping();
+                    runningPlayer.Play();
                     break;
                 case 10:
                     pictureBox2.BackgroundImage = (Properties.Resources.running);
 
                     outputLabel.Text = "You ran to your friends and told them everything";
                    
-                    runningPlayer.PlayLooping();
+                    runningPlayer.Play();
 
                     optionButton1.Text = "Run right away";
                     optionButton2.Text = "Find a safe place and make a plan";
                     break;
                 case 11:
-                    runningPlayer.PlayLooping();
-                    zombieNoisePlayer.PlayLooping();
+                    runningPlayer.Play();
+                    zombieNoisePlayer.Play();
 
                     pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
-                    outputLabel.Text = "You and your friends got chased and killed by a scary looking creature. \r\n Play Again?";
+                    outputLabel.Text = "You and your friends got chased and killed by a scary-looking creature. \r\n Play Again?";
                    
                     timePassPlayer.PlayLooping();
                     optionButton1.Text = "Yes";
@@ -467,9 +470,9 @@ namespace Adventure_Project
 
                     pictureBox2.BackgroundImage = (Properties.Resources.gun);
 
-                    outputLabel.Text = "You're safe! \r\nYou also find a gun, some food and water for temporary, the map to escape.";
+                    outputLabel.Text = "You're safe! \r\nYou also find a gun, some food and water for temporary, and the map to escape.";
                     Refresh();
-                    Thread.Sleep(2000);
+                    Thread.Sleep(4000);
 
                     optionButton1.Visible = true;
                     optionButton2.Visible = true;
@@ -485,21 +488,21 @@ namespace Adventure_Project
                     optionButton2.Text = "Try escaping";
                     break;
                 case 14:
-                    zombieNoisePlayer.PlayLooping();
-                    screamingPlayer.PlayLooping();
+                    zombieNoisePlayer.Play();
+                    screamingPlayer.Play();
 
                     pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
 
-                    outputLabel.Text = "The next day you were killed by the creature\r\nPlay Again?";
+                    outputLabel.Text = "The next day you were killed by the strange-looking creature\r\nPlay Again?";
                     optionButton1.Text = "Yes";
                     optionButton2.Text = "No";
                     break;
                 case 15:
-                    zombieNoisePlayer.PlayLooping();
+                    zombieNoisePlayer.Play();
 
                     pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
 
-                    outputLabel.Text = "You have waited to long, your resources ran out and the electricity hasn't came you died\r\nPlay Again?";
+                    outputLabel.Text = "You have waited too long, your resources ran out and the electricity hasn't come you died\r\nPlay Again?";
                     optionButton1.Text = "No";
                     optionButton2.Text = "Yes";
                     break;
@@ -514,20 +517,20 @@ namespace Adventure_Project
 
                     outputLabel.Text = "According to the map you are on the way to escape. In the morning you realize there is no creature roaming around";
                     Refresh();
-                    Thread.Sleep(3000);
+                    Thread.Sleep(4000);
 
                     optionButton1.Visible = true;
                     optionButton2.Visible = true;
 
                     pictureBox2.BackgroundImage = (Properties.Resources.house);
 
-                    outputLabel.Text = "They are planning to reach a small hotel and according to the map it will take them 10 hours walk and 6 hours car";
+                    outputLabel.Text = "They are planning to reach a small hotel and according to the map, it will take them 10 hours to walk and 6 hours by car.";
                     optionButton1.Text = "Walk";
                     optionButton2.Text = "Find a Car nearby";
                     break;
                 case 17:
-                    zombieNoisePlayer.PlayLooping();
-                    screamingPlayer.PlayLooping();
+                    zombieNoisePlayer.Play();
+                    screamingPlayer.Play();
 
                     pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
 
@@ -552,17 +555,17 @@ namespace Adventure_Project
 
                     outputLabel.Text = "You reached the hotel successfully and safely but as you were going to it you saw blood and dead bodies of people.";
                     Refresh();
-                    Thread.Sleep(3000);
+                    Thread.Sleep(4500);
 
                     optionButton1.Visible = true;
                     optionButton2.Visible = true;
 
-                    zombieNoisePlayer.PlayLooping();
-                    screamingPlayer.PlayLooping();
+                    zombieNoisePlayer.Play();
+                    screamingPlayer.Play();
 
                     pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
 
-                    outputLabel.Text = "You saw a creature trying to chase you  but lucky you ended up saving yourself in a room. The next morning you saw no creature outside so that made you wonder why the creature are not seen but they can in the night. There is a gas station nearby";
+                    outputLabel.Text = "You saw a creature trying to chase you but lucky you ended up saving yourself in a room. The next morning you saw no creature outside so that made you wonder why the creatures are not seen but they can in the night. There is a gas station nearby";
                     optionButton1.Text = "It's fine, keep going";
                     optionButton2.Text = "Fuel";
                     break;
@@ -582,13 +585,13 @@ namespace Adventure_Project
 
                     pictureBox2.BackgroundImage = (Properties.Resources.car);
 
-                    outputLabel.Text = "You were close to escaping but suddenly your car got in engine problem ";
+                    outputLabel.Text = "You were close to escaping but suddenly your car got in engine problem";
                     optionButton1.Text = "Fix it";
                     optionButton2.Text = "Walk 2 hours and escape";
                     break;
                 case 21:
                     themePlayer.PlayLooping();
-                    zombieNoisePlayer.PlayLooping();
+                    zombieNoisePlayer.Play();
                     timePassPlayer.PlayLooping();
 
                     pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
@@ -601,14 +604,14 @@ namespace Adventure_Project
                 case 22:
                     themePlayer.PlayLooping();
                     timePassPlayer.PlayLooping();
-                    zombieNoisePlayer.PlayLooping();
+                    zombieNoisePlayer.Play();
 
                     optionButton3.Visible = true;
                     optionButton3.Enabled = true;
 
                    pictureBox2.BackgroundImage = (Properties.Resources.running);
 
-                    outputLabel.Text = "You chose walk for 2 hours but it turn evening and creature are getting outside";
+                    outputLabel.Text = "You chose to walk for 2 hours but it turned evening and creatures were getting outside.";
                     optionButton1.Text = "Run Separate";
                     optionButton2.Text = "Pull out a gun and stay together";
                     optionButton3.Text = "Hide";
@@ -616,8 +619,8 @@ namespace Adventure_Project
                 case 23:
                     optionButton3.Visible = false;
 
-                    screamingPlayer.PlayLooping();
-                    zombieNoisePlayer.PlayLooping();
+                    screamingPlayer.Play();
+                    zombieNoisePlayer.Play();
 
                     pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
 
@@ -628,8 +631,8 @@ namespace Adventure_Project
                 case 24:
                     optionButton3.Visible = false;
 
-                    zombieNoisePlayer.PlayLooping();
-                    screamingPlayer.PlayLooping();
+                    zombieNoisePlayer.Play();
+                    screamingPlayer.Play();
 
                     pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
 
@@ -647,7 +650,7 @@ namespace Adventure_Project
 
                     outputLabel.Text = "You survived the night and was successful escaping ";
                     Refresh();
-                    Thread.Sleep(2000);
+                    Thread.Sleep(2500);
 
                     optionButton1.Visible = true;
                     optionButton2.Visible = true;
@@ -673,12 +676,13 @@ namespace Adventure_Project
 
                     Refresh();
                     Thread.Sleep(2000);
-                    Application.Exit();
+                    Application.Exit(); //Exits the application / closing the game
                     break;
             }
         }
 
         private void optionButton3_Click(object sender, EventArgs e)
+        // The third button function of to direct where it takes the story
         {
             if (page == 22)
             {
@@ -694,18 +698,15 @@ namespace Adventure_Project
         }
 
         private void startButton_Click_1(object sender, EventArgs e)
+            //what happens at the start of the game
         {
-            themePlayer.Stop();
-
             optionButton1.Hide();
             optionButton2.Hide();
             optionButton3.Hide();
+
             titleLabel2.Hide();
-
             startButton.Hide();
-            pictureBox1.Hide();
             
-
             optionButton1.Enabled = true;
             optionButton2.Enabled = true;
             optionButton3.Enabled = false;
