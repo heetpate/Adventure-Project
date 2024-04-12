@@ -414,8 +414,8 @@ namespace Adventure_Project
                 case 9:
                     phoneRingingPlayer.Play();
 
-                    optionButton1.Visible = true;
-                    optionButton2.Visible = true;
+                    optionButton1.Visible = false;
+                    optionButton2.Visible = false;
 
                     pictureBox2.BackgroundImage = (Properties.Resources.running);
 
@@ -424,6 +424,9 @@ namespace Adventure_Project
                     Thread.Sleep(3000);
 
                     outputLabel.Text = "You ran to your friends and told them everything";
+
+                    optionButton1.Visible = true;
+                    optionButton2.Visible = true;
 
                     optionButton1.Text = "Run right away";
                     optionButton2.Text = "Find a safe place and make a plan";
@@ -619,8 +622,8 @@ namespace Adventure_Project
                 case 23:
                     optionButton3.Visible = false;
 
-                    screamingPlayer.Play();
-                    zombieNoisePlayer.Play();
+                    screamingPlayer.PlayLooping();
+                    zombieNoisePlayer.PlayLooping();
 
                     pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
 
@@ -631,8 +634,8 @@ namespace Adventure_Project
                 case 24:
                     optionButton3.Visible = false;
 
-                    zombieNoisePlayer.Play();
-                    screamingPlayer.Play();
+                    zombieNoisePlayer.PlayLooping();
+                    screamingPlayer.PlayLooping();
 
                     pictureBox2.BackgroundImage = (Properties.Resources.strangeLookingCreature);
 
